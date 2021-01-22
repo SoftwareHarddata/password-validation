@@ -1,6 +1,5 @@
 public class PasswordValidation {
     public static void main(String[] args) {
-
         String password = "Nimbus1234";
         if (checkLength(password)
                 && checkNumbers(password)
@@ -11,6 +10,21 @@ public class PasswordValidation {
             System.out.println("Das Passwort wurde nicht aktzeptiert! ");
         }
     }
+
+    /////////////////////////
+        public static boolean checkAll (String password){
+            if (checkLength(password)
+                    && checkNumbers(password)
+                    && checkUpperCase(password)
+                    && checkLowerCase(password)) {
+                System.out.println("Das Passwort wurde aktzeptiert! ");
+                return true;
+            } else {
+                System.out.println("Das Passwort wurde nicht aktzeptiert! ");
+                return false;
+            }
+        }
+        //////////
         public static boolean checkLength (String password){
             if (password.length() > 8) {
                 return true;
