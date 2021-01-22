@@ -1,6 +1,6 @@
 public class PasswordValidation {
     public static void main(String[] args) {
-        String password = "Nimbus1234";
+        /*String password = "Nimbus1234";
         if (checkLength(password)
                 && checkNumbers(password)
                 && checkUpperCase(password)
@@ -8,11 +8,28 @@ public class PasswordValidation {
             System.out.println("Das Passwort wurde aktzeptiert! ");
         } else {
             System.out.println("Das Passwort wurde nicht aktzeptiert! ");
+        }*/
+        String[] passwordArray = {"Nimbus1234", "nim", "nimbus1234", "nimbusgggggg", "DDDDDDDDDDDD", "565656565656"};
+        passwordValidationArray (passwordArray);
+    }
+    //////////////////////////////////////////
+    public static boolean passwordValidationArray (String[] passwordArray){
+        //String[] passwordArray = {"Nimbus1234", "nim", "nimbus1234", "nimbusgggggg", "DDDDDDDDDDDD", "565656565656"};
+        for (int i = 0; i < passwordArray.length; i++) {
+            // for (String s : passwordArray) {
+            if (!checkAll(passwordArray[i])){
+                return false;
+            }
         }
+        return true;
     }
 
-    /////////////////////////
+    /////////////////////////////////////////
         public static boolean checkAll (String password){
+            /*return checkLength(password)
+                    && checkNumbers(password)
+                    && checkUpperCase(password)
+                    && checkLowerCase(password);*/
             if (checkLength(password)
                     && checkNumbers(password)
                     && checkUpperCase(password)
@@ -24,7 +41,8 @@ public class PasswordValidation {
                 return false;
             }
         }
-        //////////
+        ////////////////////////////////////////
+
         public static boolean checkLength (String password){
             if (password.length() > 8) {
                 return true;

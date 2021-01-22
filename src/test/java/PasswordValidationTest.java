@@ -30,7 +30,6 @@ public class PasswordValidationTest {
         //Then
         assertEquals(true, result);
         assertEquals(false, resultOhne);
-
     }
 
     @Test

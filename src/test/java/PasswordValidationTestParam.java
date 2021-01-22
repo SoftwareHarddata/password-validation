@@ -15,7 +15,6 @@ public class PasswordValidationTestParam {
     public void passwordValidationParams (String password, boolean expectedResult){
         boolean actual = PasswordValidation.checkAll(password);
         assertEquals(expectedResult, actual);
-
     }
 
     private  static Stream<Arguments> passwordValidationParams(){
